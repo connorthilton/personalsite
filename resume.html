@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume &mdash; Connor Hilton</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Document shell ─────────────────────────────────────── */
+    body {
+      background: var(--cream);
+    }
+
+    .resume-toolbar {
+      max-width: 780px;
+      margin: 1.5rem auto 0;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+    }
+
+    /* ── Paper ──────────────────────────────────────────────── */
+    .resume-doc {
+      background: #fff;
+      max-width: 780px;
+      margin: 1rem auto 3rem;
+      padding: 1in;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12pt;
+      line-height: 2;
+      color: #000;
+    }
+
+    .resume-doc p,
+    .resume-doc li,
+    .resume-doc span,
+    .resume-doc a {
+      color: #000;
+    }
+
+    /* ── Header block ───────────────────────────────────────── */
+    .r-name {
+      text-align: center;
+      font-size: 14pt;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+
+    .r-contact {
+      text-align: center;
+      font-size: 11pt;
+      line-height: 1.6;
+      margin-bottom: 0.15in;
+      color: #000;
+    }
+
+    .r-contact a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    hr.r-rule {
+      border: none;
+      border-top: 1.5px solid #000;
+      margin: 0.1in 0;
+    }
+
+    /* ── Section header ─────────────────────────────────────── */
+    .r-section-head {
+      font-size: 12pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 0.1in;
+      margin-bottom: 0;
+      line-height: 2;
+    }
+
+    hr.r-section-rule {
+      border: none;
+      border-top: 1px solid #000;
+      margin: 0 0 0.05in 0;
+    }
+
+    /* ── Entry row ──────────────────────────────────────────── */
+    .r-entry {
+      margin-bottom: 0;
+    }
+
+    .r-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      line-height: 2;
+    }
+
+    .r-org {
+      font-weight: bold;
+    }
+
+    .r-date {
+      font-size: 11pt;
+      white-space: nowrap;
+    }
+
+    .r-role-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      line-height: 2;
+    }
+
+    .r-role {
+      font-style: italic;
+    }
+
+    .r-location {
+      font-size: 11pt;
+    }
+
+    /* ── Bullets ────────────────────────────────────────────── */
+    .r-bullets {
+      margin: 0;
+      padding-left: 0.35in;
+      list-style: disc;
+    }
+
+    .r-bullets li {
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* ── Education specifics ────────────────────────────────── */
+    .r-edu-detail {
+      line-height: 2;
+      margin: 0;
+    }
+
+    /* ── Skills ─────────────────────────────────────────────── */
+    .r-skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0;
+      padding-left: 0.35in;
+      list-style: disc;
+    }
+
+    .r-skills-grid li {
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── Print ──────────────────────────────────────────────── */
+    @media print {
+      nav,
+      .resume-toolbar,
+      footer {
+        display: none !important;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      .resume-doc {
+        box-shadow: none;
+        margin: 0;
+        padding: 1in;
+        max-width: 100%;
+      }
+
+      @page {
+        size: letter;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Connor Hilton</a>
+      <ul class="nav-links">
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="interests.html">Interests</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Toolbar (hidden on print) -->
+  <div class="resume-toolbar">
+    <button class="btn btn-outline" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <!-- Document -->
+  <div class="resume-doc">
+
+    <!-- Header -->
+    <p class="r-name">Connor Hilton</p>
+    <p class="r-contact">
+      801-809-2047 &nbsp;&bull;&nbsp;
+      <a href="mailto:connor.t.hilton@gmail.com">connor.t.hilton@gmail.com</a> &nbsp;&bull;&nbsp;
+      <a href="https://github.com/connorthilton" target="_blank" rel="noopener">github.com/connorthilton</a>
+    </p>
+    <hr class="r-rule" />
+
+    <!-- Education -->
+    <p class="r-section-head">Education</p>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-org">Brigham Young University</span>
+        <span class="r-date">Sep 2024 &ndash; Apr 2028 (Projected)</span>
+      </div>
+      <div class="r-role-line">
+        <span class="r-role">Bachelor of Science, Information Systems &mdash; Minor in Cybersecurity</span>
+        <span class="r-location">Provo, Utah</span>
+      </div>
+      <ul class="r-bullets">
+        <li>GPA: 3.7</li>
+        <li>Completed initial Electrical Engineering coursework: C++, Python, Calculus, and Embedded Systems.</li>
+        <li>Transitioned to Information Systems to focus on software systems, automation, and applied AI.</li>
+      </ul>
+    </div>
+
+    <!-- Experience -->
+    <p class="r-section-head">Experience</p>
+    <hr class="r-section-rule" />
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-org">Pillar Solutions LLC</span>
+        <span class="r-date">Nov 2025 &ndash; Present</span>
+      </div>
+      <div class="r-role-line">
+        <span class="r-role">Founder and Engineer</span>
+        <span class="r-location">Provo, Utah</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Designed AI-assisted messaging workflows for property managers, improving outreach efficiency by 2&times;.</li>
+        <li>Built automation pipelines using sanitized operational data to generate reliable LLM outputs.</li>
+        <li>Refined prompt design and input data structures to improve message quality and consistency.</li>
+      </ul>
+    </div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-org">Proximity Live LLC</span>
+        <span class="r-date">Sep 2025 &ndash; Present</span>
+      </div>
+      <div class="r-role-line">
+        <span class="r-role">Core Programmer</span>
+        <span class="r-location">Provo, Utah</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Worked collaboratively with a small team to build and deploy a production mobile networking app.</li>
+        <li>Used LLM-based coding tools to accelerate development, refactor code, and debug.</li>
+        <li>Built an automated web data pipeline to identify user segments and contact opportunities.</li>
+      </ul>
+    </div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-org">TED Conferences LLC &mdash; TEDxProvo</span>
+        <span class="r-date">Nov 2024 &ndash; Present</span>
+      </div>
+      <div class="r-role-line">
+        <span class="r-role">Lead Organizer</span>
+        <span class="r-location">Provo, Utah</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Organized the annual TEDxProvo conference, debuting in March 2025.</li>
+        <li>Coordinated logistics, AV systems, and marketing volunteers.</li>
+      </ul>
+    </div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-org">Independent Engineering Project</span>
+        <span class="r-date">May 2025</span>
+      </div>
+      <div class="r-role-line">
+        <span class="r-role">Modular Wireless Actuator for Film Cameras</span>
+        <span class="r-location">Provo, Utah</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Designed a networked system integrating an embedded device with custom control software.</li>
+        <li>Documented functionality and design, filing a provisional patent for the invention.</li>
+      </ul>
+    </div>
+
+    <div class="r-entry">
+      <div class="r-entry-header">
+        <span class="r-org">Foreign Religious Service</span>
+        <span class="r-date">Aug 2022 &ndash; Aug 2024</span>
+      </div>
+      <div class="r-role-line">
+        <span class="r-role">Missionary, Financial Secretary, Assistant to the President</span>
+        <span class="r-location">Recife, Brazil</span>
+      </div>
+      <ul class="r-bullets">
+        <li>Managed $25K+ monthly budget, maintaining data security and building Excel expense systems.</li>
+        <li>Produced training materials and delivered in-person training for 150+ volunteers across cultural barriers.</li>
+        <li>Achieved fluent Portuguese and elementary Spanish.</li>
+      </ul>
+    </div>
+
+    <!-- Skills -->
+    <p class="r-section-head">Skills</p>
+    <hr class="r-section-rule" />
+    <ul class="r-skills-grid">
+      <li>Python, C++, Git</li>
+      <li>Prompt engineering</li>
+      <li>AI coding tools</li>
+      <li>Human-in-the-loop AI workflows</li>
+      <li>System architecture visualization</li>
+      <li>System testing and optimization</li>
+      <li>Automation pipelines</li>
+      <li>Technical and professional communication</li>
+    </ul>
+
+  </div><!-- /.resume-doc -->
+
+  <footer>
+    <p>
+      &copy; 2026 Connor Hilton &mdash;
+      <a href="https://github.com/connorthilton" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
