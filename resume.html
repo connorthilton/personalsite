@@ -26,7 +26,7 @@
       background: #fff;
       max-width: 780px;
       margin: 1rem auto 3rem;
-      padding: 1in;
+      padding: 1in 0.6in;
       box-shadow: 0 4px 32px rgba(0,0,0,0.12);
       font-family: "Times New Roman", Times, serif;
       font-size: 12pt;
@@ -152,6 +152,34 @@
     .r-skills-grid li {
       line-height: 1.6;
       margin: 0;
+    }
+
+    /* ── Mobile ─────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .resume-doc {
+        padding: 0.5in 0.75rem;
+        font-size: 11pt;
+      }
+
+      .r-entry-header,
+      .r-role-line {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .r-date,
+      .r-location {
+        line-height: 1.4;
+        margin-bottom: 0.1em;
+      }
+
+      .r-contact {
+        font-size: 10pt;
+      }
+
+      .resume-toolbar {
+        padding: 0 0.75rem;
+      }
     }
 
     /* ── Print ──────────────────────────────────────────────── */
