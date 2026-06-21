@@ -7,77 +7,6 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* ---- Consulting intro + call-to-action ---- */
-    .consult-intro {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      padding: 2rem;
-      margin-bottom: 3.5rem;
-    }
-
-    .consult-intro h2 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .consult-eyebrow {
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--green);
-      margin-bottom: 0.75rem;
-    }
-
-    .consult-steps {
-      list-style: none;
-      counter-reset: step;
-      margin: 1.25rem 0 1.5rem;
-      padding: 0;
-      display: grid;
-      gap: 0.75rem;
-    }
-
-    .consult-steps li {
-      counter-increment: step;
-      position: relative;
-      padding-left: 2.5rem;
-      color: var(--gray);
-      font-size: 0.95rem;
-    }
-
-    .consult-steps li::before {
-      content: counter(step);
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 1.75rem;
-      height: 1.75rem;
-      background: var(--green);
-      color: var(--white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-
-    .consult-cta {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .consult-cta .cta-note {
-      font-size: 0.85rem;
-      color: var(--gray);
-      margin: 0;
-    }
-
     /* ---- Consulting engagement cards ---- */
     .consult-list {
       display: flex;
@@ -216,28 +145,6 @@
     <section class="section">
       <p class="section-title">Consulting &mdash; Pillar Solutions</p>
 
-      <div class="consult-intro">
-        <p class="consult-eyebrow">Workflow Automation &amp; Data</p>
-        <h2>Let me take the busywork off your plate.</h2>
-        <p>
-          I help businesses save time and money by automating manual workflows, connecting the
-          tools and APIs they already use, and turning messy data into clear, usable insight.
-          If a task is repetitive, I can probably automate it.
-        </p>
-
-        <ol class="consult-steps">
-          <li>We meet for a <strong>free consultation</strong> and talk through your project &mdash; no cost, no obligation.</li>
-          <li>I send you a <strong>quote with a couple of options</strong> and a clear timeline.</li>
-          <li>You pick what fits, and I build it.</li>
-        </ol>
-
-        <div class="consult-cta">
-          <a href="mailto:connor.t.hilton@gmail.com?subject=Project%20inquiry" class="btn btn-primary">Email me</a>
-          <a href="tel:8018092047" class="btn btn-outline">Call or text: 801-809-2047</a>
-          <p class="cta-note">Reach out and let's talk about what you're trying to solve.</p>
-        </div>
-      </div>
-
       <div class="consult-list">
 
         <div class="consult-card">
@@ -351,38 +258,6 @@
               <source src="clamp%20proj/IMG_2571.MOV" type="video/quicktime" />
             </video>
           </details>
-        </div>
-      </div>
-
-      <!-- Prompt Injection Demo -->
-      <div class="project">
-        <div class="project-media">
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/6OXktREkwy0"
-              title="Prompt Injection Demo"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-        <div class="project-body">
-          <h2>Prompt Injection Demo</h2>
-          <p>
-            A demonstration of prompt injection vulnerabilities in LLM-based systems.
-            I custom-built a vulnerable browser extension as the attack surface, designed
-            to showcase how malicious inputs can override system instructions
-            and hijack model behavior in real-world AI applications.
-          </p>
-          <div class="project-footer">
-            <div class="card-tags">
-              <span class="tag">AI Security</span>
-              <span class="tag">Prompt Engineering</span>
-              <span class="tag">LLMs</span>
-            </div>
-            <a href="https://youtu.be/6OXktREkwy0" class="btn btn-outline" style="font-size:0.8rem; padding:0.4rem 1rem;" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
         </div>
       </div>
 

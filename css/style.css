@@ -197,6 +197,14 @@ p {
   transition: background 0.15s ease, box-shadow 0.15s ease;
 }
 
+button.btn {
+  font-family: inherit;
+}
+
+button.btn-primary {
+  border: none;
+}
+
 .btn-primary {
   background: var(--green);
   color: var(--white);
@@ -284,6 +292,82 @@ p {
   display: flex;
   gap: 0.4rem;
   flex-wrap: wrap;
+}
+
+/* ============================================================
+   Consulting Pitch (index #consulting + portfolio cards)
+   ============================================================ */
+#consulting {
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
+}
+
+.consult-intro {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.consult-intro h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.consult-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--green);
+  margin-bottom: 0.75rem;
+}
+
+.consult-steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.consult-steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.5rem;
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+.consult-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--green);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.consult-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.consult-cta .cta-note {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin: 0;
 }
 
 /* ============================================================
